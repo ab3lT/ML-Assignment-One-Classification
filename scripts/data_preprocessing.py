@@ -1,6 +1,8 @@
-def main():
-    pass
+import pandas as pd
 
-
-if __name__ == "__main__":
-    main()
+class DataProcessing:
+    
+    def __init__(self, data:pd.DataFrame) -> None:
+        self.data=data
+        
+    

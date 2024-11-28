@@ -1,3 +1,8 @@
 {
-  "cSpell.words": ["venv"]
+  "cSpell.words": [
+    "venv"
+  ],
+  "python.analysis.extraPaths": [
+    "./scripts"
+  ]
 }

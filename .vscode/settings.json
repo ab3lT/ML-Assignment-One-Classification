@@ -1,9 +1,4 @@
 {
-  "cSpell.words": [
-    "dtypes",
-    "venv"
-  ],
-  "python.analysis.extraPaths": [
-    "./scripts"
-  ]
+  "cSpell.words": ["dtypes", "figsize", "venv"],
+  "python.analysis.extraPaths": ["./scripts"]
 }

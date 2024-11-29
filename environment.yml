@@ -23,8 +23,7 @@ dependencies:
   - typing_extensions=4.12.2
   - pytz=2024.2
   - python-dateutil=2.9.0.post0
-  - pywin32=308  # Only relevant for Windows; remove for Linux/Mac
-  - tzdata=2024.2
+
   - pip:
       - asttokens==2.4.1
       - colorama==0.4.6

@@ -1,4 +1,11 @@
 {
-  "cSpell.words": ["boxplot", "dtypes", "figsize", "venv"],
+  "cSpell.words": [
+    "boxplot",
+    "dtypes",
+    "figsize",
+    "histplot",
+    "venv",
+    "whitegrid"
+  ],
   "python.analysis.extraPaths": ["./scripts"]
 }

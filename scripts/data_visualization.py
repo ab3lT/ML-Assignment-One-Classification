@@ -52,6 +52,24 @@ class DataVisualizer:
             plt.grid(axis='y', linestyle='--', alpha=0.7)
             plt.tight_layout()
             plt.show()
+            
+    def plot_categorical_column(self,column):
+        plt.figure(figsize=(7, 7))
+        ax = sns.countplot(x=self.data[column])
+        total_count = len(self.data[column])
+        threshold = 0.05 * total_count
+        category_counts = self.data[column].value_counts(normalize=True) * 100
+        ax.axhline(threshold, color='red', linestyle='--', label=f'0.05% of total count ({threshold:.0f})')
+        for p in ax.patches:
+            height = p.get_height()
+            percentage = (height / total_count) * 100
+            ax.text(p.get_x() + p.get_width() / 2., height + 0.02 * total_count, f'{percentage:.2f}%', ha="center")
+        plt.title(f'Label Cardinality for "{column}" Column')
+        plt.ylabel('Count')
+        plt.xlabel(column)
+        plt.tight_layout()
+        plt.legend()
+        plt.show()
     
     def scatter_plot(self, x_col, y_col, hue_col=None):
         """

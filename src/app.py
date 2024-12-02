@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import joblib
 
 # Load your trained model
-model = joblib.load('model.pkl')  # Replace with your actual model path
+model = joblib.load('../notebooks/model.pkl')  # Replace with your actual model path
 
 # Create the FastAPI app instance
 app = FastAPI()

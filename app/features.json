@@ -1,0 +1,6 @@
+["person_income",
+ "person_home_ownership", 
+ "loan_amnt", 
+ "loan_int_rate", 
+ "loan_percent_income",
+  "previous_loan_defaults_on_file"]

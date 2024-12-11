@@ -111,13 +111,14 @@ if st.sidebar.checkbox("Train and Evaluate Models"):
     model = LogisticRegression(max_iter=1000, random_state=42)
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
+    
     st.write("Logistic Regression Accuracy:", accuracy_score(y_test, y_pred))
 
     # KNN
     k = 3
     knn = KNeighborsClassifier(n_neighbors=k)
     knn.fit(X_train, y_train)
-    y_pred_knn = knn.predict(X_test)
+    y_pred_knn = model.predict(X_test)
     st.write("KNN Accuracy:", accuracy_score(y_test, y_pred_knn))
 
     # Confusion matrix
@@ -131,7 +132,7 @@ if st.sidebar.checkbox("Train and Evaluate Models"):
         st.pyplot(plt)
 
     # Save model
-    joblib.dump(knn, 'model.pkl')
+    joblib.dump(model, 'model.pkl')
     st.write("Model saved as model.pkl")
 
 # Model testing
